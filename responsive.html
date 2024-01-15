@@ -8,7 +8,27 @@
         body{
             border: 1px solid skyblue;
             max-width: 1140px;
+            margin: 0 auto;
         }
+        .container{
+            display: flex;
+        }
+        .container div{
+            width: 50%;
+        }
+        .container img{
+            width: 100%;
+        }
+
+        @media screen and (max-width: 576px) {
+            .container{
+                flex-direction: column-reverse;
+            }
+            .container div{
+                width: 100px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -17,15 +37,22 @@
         <ol>
             <li>Viewport Meta Tag</li>
             <li>CSS Relative Unit</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Body max width and horizontal center align</li>
+            <li>Image fluid</li>
+            <li>Two column flex and use media query with flex direction column</li>
+            <li>Multi-column: Grid layout</li>
+            <li>Menu responsive: Will need javascript</li>
         </ol>
     </header>
     <Main>
-        <img src="images/food.jpg" alt="">
+        <div class="container">
+            <div>
+                <img src="images/food.jpg" alt="">
+            </div>
+            <Div>
+                <img src="images/tiger.jpg" alt="">
+            </Div>
+        </div>
     </Main>
 </body>
 </html>
